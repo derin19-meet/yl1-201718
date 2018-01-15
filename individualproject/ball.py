@@ -1,7 +1,6 @@
 from turtle import *
 
-# turtle.shape('circle')
-# turtle.tracer(1,0)
+
 
 class Ball(Turtle):
     def __init__(self,x,y,dx,dy,r,color):
@@ -46,5 +45,4 @@ flag = True
 while flag:
     a.move(500,500)
 
-# self.goto(new_x, new_y)
 
