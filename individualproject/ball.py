@@ -40,9 +40,9 @@ class Ball(Turtle):
         
 
 
-a= Ball(0,0,100, 500, 10/10,'blue')
-flag = True
-while flag:
-    a.move(500,500)
+# a= Ball(0,0,100, 500, 10/10,'blue')
+# flag = True
+# while flag:
+#     a.move(500,500)
 
 
