@@ -1,7 +1,5 @@
 from turtle import *
 
-
-
 class Ball(Turtle):
     def __init__(self,x,y,dx,dy,r,color):
         Turtle.__init__(self)
@@ -11,8 +9,11 @@ class Ball(Turtle):
         self.dx=dx
         self.dy=dy
         self.r=r
+        self.goto(x, y)
         self.color(color)
         self.shape('circle')
+        self.shapesize(r/10)
+
 
     def move(self, screen_width, screen_height):
         self.screen_width=screen_width
@@ -29,20 +30,17 @@ class Ball(Turtle):
         top_side_ball= new_y + self.r
         bottom_side_ball= new_y - self.r
 
-        if top_side_ball>= screen_height/2:
-            self.goto(self.dx,-self.dy)
-        if bottom_side_ball>= -screen_height/2:
-                self.goto(self.dx, self.dy)
-        if left_side_ball>= -screen_width/2:
-                self.goto(self.dx, -self.dy)
-        if right_side_ball>= screen_width/2:
-                self.goto(self.dx,self.dy)
+        if top_side_ball>= screen_height:
+			self.dy=-self.dy
+			self.clear()
+        if bottom_side_ball<= -screen_height:
+			self.dy=-self.dy
+			self.clear()
+        if left_side_ball<= -screen_width:
+			self.dx=-self.dx
+			self.clear()
+        if right_side_ball>= screen_width:
+			self.dx=-self.dx
+			self.clear()
+              
         
-
-
-# a= Ball(0,0,100, 500, 10/10,'blue')
-# flag = True
-# while flag:
-#     a.move(500,500)
-
-
