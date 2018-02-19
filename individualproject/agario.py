@@ -129,8 +129,8 @@ turtle.listen()
 
 
 while RUNNING==True:
-	if SCREEN_WIDTH != turtle.getcanvas().winfo_width()/2 or SCREEN_HEIGHT != turtle.getcanvas().winfo_height()/2 :
-		SCREEN_WIDTH = turtle.getcanvas().winfo_width()/2
+	if SCREEN_WIDTH != turtle.getcanvas().winfo_width()/2 and SCREEN_HEIGHT != turtle.getcanvas().winfo_height()/2 :
+        SCREEN_WIDTH = turtle.getcanvas().winfo_width()/2
 		SCREEN_HEIGHT = turtle.getcanvas().winfo_height()/2
 	
 	move_all_balls()
